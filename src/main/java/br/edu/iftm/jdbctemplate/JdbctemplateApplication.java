@@ -28,7 +28,7 @@ public class JdbctemplateApplication implements CommandLineRunner {
 		jdbcTemplate.update("INSERT INTO contatos(nome,telefone) VALUES (?,?)", "José Joaquim", "123");
 		jdbcTemplate.update("INSERT INTO contatos(nome,telefone) VALUES (?,?)", "Maria Carolina", "123");
 		jdbcTemplate.update("INSERT INTO contatos(nome,telefone) VALUES (?,?)", "José Maria", "432432");
-		jdbcTemplate.update("INSERT INTO contatos(nome,telefone) VALUES (?,?)", "Iure", "44433232");
+		jdbcTemplate.update("INSERT INTO contatos(nome,telefone) VALUES (?,?)", "Iure", "444332");
 
 		List<Contato> contatos = jdbcTemplate.query("SELECT id, nome, telefone FROM contatos", (rs, rowNum) -> {
 			return new Contato(rs.getLong("id"), rs.getString("nome"), rs.getString("telefone"));
